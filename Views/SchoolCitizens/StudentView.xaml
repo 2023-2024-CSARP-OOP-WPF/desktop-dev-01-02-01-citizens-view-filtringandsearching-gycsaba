@@ -8,6 +8,13 @@
              xmlns:viewmodel="clr-namespace:MenuProject.ViewModels.SchoolCitizens"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    <d:DesignerProperties.DesignStyle>
+        <Style TargetType="UserControl">
+            <Setter Property="Background" Value="White" />
+            <Setter Property="Height" Value="700" />
+            <Setter Property="Width" Value="900" />
+        </Style>
+    </d:DesignerProperties.DesignStyle>
     <UserControl.DataContext>
         <viewmodel:StudentViewModel />
     </UserControl.DataContext>
