@@ -45,7 +45,8 @@
             <StackPanel Orientation="Horizontal">
                 <Label Content="Névrészlet:"/>
                 <TextBox Width="150"
-                         Margin="2 2 2 2"/>
+                         Margin="2 2 2 2"
+                         Text="{Binding SearchedName}"/>
                 <Button Content="Szűrés"
                         MinWidth="80"
                         Margin="2 2 2 2"/>

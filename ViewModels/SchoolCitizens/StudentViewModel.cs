@@ -19,7 +19,9 @@ namespace MenuProject.ViewModels.SchoolCitizens
         private ObservableCollection<Student> _students = new();
 
         [ObservableProperty]
-        private Student _selectedStudent;        
+        private Student _selectedStudent;  
+        
+        public string SearchedName { get; set; } = string.Empty;
         
         public StudentViewModel()
         {
