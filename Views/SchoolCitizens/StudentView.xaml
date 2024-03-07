@@ -40,7 +40,8 @@
         </Grid.RowDefinitions>
         <Expander Grid.Row="1"
                   Grid.ColumnSpan="2"
-                  Header="Keresés és Szűrés">
+                  Header="Keresés és Szűrés"
+                  Background="Beige">
             <StackPanel Orientation="Horizontal">
                 <Label Content="Névrészlet:"/>
                 <TextBox Width="150"
