@@ -52,6 +52,12 @@ namespace MenuProject.ViewModels.SchoolCitizens
             UpdateView();
         }
 
+        [RelayCommand]
+        public void Filtering()
+        {
+
+        }
+
         private void UpdateView()
         {
             EducationLevels = new ObservableCollection<string>(_educationLevelsRepo.FindAll());
