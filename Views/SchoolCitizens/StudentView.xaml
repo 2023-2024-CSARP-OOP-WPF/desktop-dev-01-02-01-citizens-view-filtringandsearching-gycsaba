@@ -41,6 +41,17 @@
         <Expander Grid.Row="1"
                   Grid.ColumnSpan="2"
                   Header="Keresés és Szűrés">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Névrészlet:"/>
+                <TextBox Width="150"
+                         Margin="2 2 2 2"/>
+                <Button Content="Szűrés"
+                        MinWidth="80"
+                        Margin="2 2 2 2"/>
+                <Button Content="Visszaállítás"
+                        MinWidth="80"
+                        Margin="2 2 2 2"/>
+            </StackPanel>
         </Expander>
         <Label Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Center">Diák adatok</Label>
         <Label Grid.Row="2" Grid.Column="0">Vezeték név:</Label>
