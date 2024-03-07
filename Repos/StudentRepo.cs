@@ -95,6 +95,11 @@ namespace MenuProject.Repos
             _students.Remove(student);
         }
 
+        public List<Student> Filtering(string searchedName)
+        {
+
+        }
+
 
     }
 }
