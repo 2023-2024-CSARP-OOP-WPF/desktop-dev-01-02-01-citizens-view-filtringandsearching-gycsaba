@@ -99,10 +99,13 @@ namespace MenuProject.Repos
                                        bool IsGenderSearchingEnabled,
                                        bool IsWoman)
         {
-            return FindAll()
-                .Where(student
+            List<Student> students = FindAll();
+            SearchByGender(ref students,IsGenderSearchingEnabled,IsWoman);
+            return students;
+
+            /*    .Where(student
                   => student.HungarianName.ToLower().Contains(searchedName.ToLower().Trim()))
-                .ToList();
+                .ToList();*/
         }
 
         private void SearchByGender(ref List<Student> students, 
@@ -111,7 +114,7 @@ namespace MenuProject.Repos
         {
             if (isGenderSearchingEnabled)
             {
-                students.Where(student => student.IsWoman = isWoman);
+                students.Where(student => student.IsWoman == isWoman);
             }
         }
                                     
