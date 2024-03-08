@@ -3,7 +3,9 @@ using CommunityToolkit.Mvvm.Input;
 using MenuProject.Repos;
 using MenuProject.SchoolCitizens;
 using MenuProject.ViewModels.Base;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Windows.Documents;
 
 namespace MenuProject.ViewModels.SchoolCitizens
 {
@@ -55,7 +57,8 @@ namespace MenuProject.ViewModels.SchoolCitizens
         [RelayCommand]
         public void Filtering()
         {
-
+            List<Student> result = _studentRepo.Filtering(SearchedName);
+            Students = new ObservableCollection<Student>(result);
         }
 
         private void UpdateView()
