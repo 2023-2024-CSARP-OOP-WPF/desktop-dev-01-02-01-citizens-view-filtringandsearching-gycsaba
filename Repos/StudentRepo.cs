@@ -95,12 +95,25 @@ namespace MenuProject.Repos
             _students.Remove(student);
         }
 
-        public List<Student> Filtering(string searchedName)
+        public List<Student> Filtering(string searchedName,
+                                       bool IsGenderSearchingEnabled,
+                                       bool IsWoman)
         {
             return FindAll()
                 .Where(student
                   => student.HungarianName.ToLower().Contains(searchedName.ToLower().Trim()))
                 .ToList();
         }
+
+        private void SearchByGender(ref List<Student> students, 
+                                    bool isGenderSearchingEnabled,
+                                    bool isWoman)
+        {
+            if (isGenderSearchingEnabled)
+            {
+                students.Where(student => student.IsWoman = isWoman);
+            }
+        }
+                                    
     }
 }
