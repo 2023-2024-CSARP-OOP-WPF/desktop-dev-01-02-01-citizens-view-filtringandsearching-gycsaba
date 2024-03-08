@@ -109,8 +109,8 @@ namespace MenuProject.Repos
         {
             if (searchedName.Any())
             {
-                students.Where(student
-                  => student.HungarianName.ToLower().Contains(searchedName.ToLower().Trim()));
+                students = students.Where(student
+                  => student.HungarianName.ToLower().Contains(searchedName.ToLower().Trim())).ToList();
             }
         }
         private void SearchByGender(ref List<Student> students, 
@@ -119,7 +119,7 @@ namespace MenuProject.Repos
         {
             if (isGenderSearchingEnabled)
             {
-                students.Where(student => student.IsWoman == isWoman);
+                students=students.Where(student => student.IsWoman == isWoman).ToList();
             }
         }
                                     
