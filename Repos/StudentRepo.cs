@@ -96,11 +96,11 @@ namespace MenuProject.Repos
         }
 
         public List<Student> Filtering(string searchedName,
-                                       bool IsGenderSearchingEnabled,
-                                       bool IsWoman)
+                                       bool isGenderSearchingEnabled,
+                                       bool isWoman)
         {
             List<Student> students = FindAll();
-            SearchByGender(ref students,IsGenderSearchingEnabled,IsWoman);
+            SearchByGender(ref students, isGenderSearchingEnabled, isWoman);
             SearchByName(ref students,searchedName);
             return students;
         }
