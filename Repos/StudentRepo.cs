@@ -101,13 +101,18 @@ namespace MenuProject.Repos
         {
             List<Student> students = FindAll();
             SearchByGender(ref students,IsGenderSearchingEnabled,IsWoman);
+            SearchByName(ref students,searchedName);
             return students;
-
-            /*    .Where(student
-                  => student.HungarianName.ToLower().Contains(searchedName.ToLower().Trim()))
-                .ToList();*/
         }
-
+        private void SearchByName(ref List<Student> students, 
+                                  string searchedName)
+        {
+            if (searchedName.Any())
+            {
+                students.Where(student
+                  => student.HungarianName.ToLower().Contains(searchedName.ToLower().Trim()));
+            }
+        }
         private void SearchByGender(ref List<Student> students, 
                                     bool isGenderSearchingEnabled,
                                     bool isWoman)
