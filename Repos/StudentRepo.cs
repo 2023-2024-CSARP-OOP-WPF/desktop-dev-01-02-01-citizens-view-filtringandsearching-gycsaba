@@ -99,7 +99,7 @@ namespace MenuProject.Repos
         {
             return FindAll()
                 .Where(student
-                  => student.HungarianName.ToLower().Contains(searchedName.ToLower()))
+                  => student.HungarianName.ToLower().Contains(searchedName.ToLower().Trim()))
                 .ToList();
         }
     }
