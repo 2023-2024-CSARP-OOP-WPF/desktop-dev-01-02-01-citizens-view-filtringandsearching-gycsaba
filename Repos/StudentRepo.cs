@@ -98,7 +98,8 @@ namespace MenuProject.Repos
         public List<Student> Filtering(string searchedName)
         {
             return FindAll()
-                .Where(student => student.HungarianName.Contains(searchedName))
+                .Where(student
+                  => student.HungarianName.ToLower().Contains(searchedName.ToLower()))
                 .ToList();
         }
     }
