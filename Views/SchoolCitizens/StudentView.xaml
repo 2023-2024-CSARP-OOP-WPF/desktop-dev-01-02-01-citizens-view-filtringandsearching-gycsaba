@@ -45,11 +45,15 @@
             <StackPanel Orientation="Horizontal">
                 <Label Content="Névrészlet:"/>
                 <TextBox Width="150"
-                         Margin="2 2 2 2"
-                         Text="{Binding SearchedName}"/>
+                         Margin="2 2 30 2"
+                         Text="{Binding SearchedName}"
+                 />
+                <CheckBox Margin="4"></CheckBox>
+                <RadioButton Margin="4" GroupName="SearchedGender">nő</RadioButton>
+                <RadioButton Margin ="4" GroupName="SearchedGender">férfi</RadioButton>
                 <Button Content="Szűrés"
                         MinWidth="80"
-                        Margin="2 2 2 2"
+                        Margin="30 2 2 2"
                         Command="{Binding FilteringCommand}"
                         />
                 <Button Content="Visszaállítás"

@@ -24,6 +24,8 @@ namespace MenuProject.ViewModels.SchoolCitizens
         private Student _selectedStudent;  
         
         public string SearchedName { get; set; } = string.Empty;
+        public bool IsGenderSearchingEnabled { get; set; } = false;
+        public bool IsWoman {  get; set; } = false;
         
         public StudentViewModel()
         {
