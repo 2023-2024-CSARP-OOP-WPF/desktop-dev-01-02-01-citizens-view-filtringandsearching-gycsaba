@@ -57,7 +57,7 @@ namespace MenuProject.ViewModels.SchoolCitizens
         }
 
         [RelayCommand]
-        public void Filtering()
+        public void FilteringAndSearching()
         {
             List<Student> result = _studentRepo.Filtering(SearchedName,IsGenderSearchingEnabled,IsWoman);
             Students = new ObservableCollection<Student>(result);

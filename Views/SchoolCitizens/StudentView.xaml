@@ -54,7 +54,7 @@
                 <Button Content="Szűrés"
                         MinWidth="80"
                         Margin="30 2 2 2"
-                        Command="{Binding FilteringCommand}"
+                        Command="{Binding FilteringAndSearchingCommand}"
                         />
                 <Button Content="Visszaállítás"
                         MinWidth="80"

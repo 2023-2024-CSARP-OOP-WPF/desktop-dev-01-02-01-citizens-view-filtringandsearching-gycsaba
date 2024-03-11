@@ -100,7 +100,7 @@ namespace MenuProject.Repos
                                        bool isWoman)
         {
             List<Student> students = FindAll();
-            SearchByGender(ref students, isGenderSearchingEnabled, isWoman);
+            FilteringByGender(ref students, isGenderSearchingEnabled, isWoman);
             SearchByName(ref students,searchedName);
             return students;
         }
@@ -113,7 +113,7 @@ namespace MenuProject.Repos
                   => student.HungarianName.ToLower().Contains(searchedName.ToLower().Trim())).ToList();
             }
         }
-        private void SearchByGender(ref List<Student> students, 
+        private void FilteringByGender(ref List<Student> students, 
                                     bool isGenderSearchingEnabled,
                                     bool isWoman)
         {
